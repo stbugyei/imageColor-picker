@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Color | Picker</title>
+	<link rel="stylesheet" href="./picker.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
+		integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+</head>
+
+<body>
+	<div class="color-picker__wrapper">
+		<div class="text-wrapper">
+			<li>
+				<h5 class="logo">STBUGYEI😊</h5>
+			</li>
+			<li><small>Hover, Click on Image to Pick Color</small> </li>
+		</div>
+
+		<div class="title-quote__wrapper">
+			<div class="quotes">
+				<h4>Broken crayons still color</h4>
+				<h4>Get out your rainbow colors and make today beautiful.</h4>
+			</div>
+
+			<div class="title-text">
+				<h1 class="title-text__first"><span>IMAGE</span> COLOR</h1>
+				<h1 class="title-text__second"><span>PICKER</span></h1>
+				<h4>Get out your rainbow colors and make today beautiful.</h4>
+			</div>
+		</div>
+
+		<span class="tooltip"></span>
+		<div class="color-picker__content">
+			<div class="text-canvas">
+
+				<div class="tint-shade__wrapper">
+					<div class="tint-color__wrapper">
+					</div>
+					<div class="shade-color__wrapper">
+					</div>
+				</div>
+
+				<div class="canvas-wrapper">
+					<h3 class="bg-text"> Come on... ! You do have a Photo, right?😊</h3>
+					<canvas id="canvas" width="600" height="400"></canvas>
+				</div>
+			</div>
+
+			<div class="select-input__wrapper">
+				<div class="select-color__wrapper">
+					<h4>Your Choice of Color <span><i class="fas fa-paint-brush"></i></span>
+					</h4>
+					<div class="preview">
+						<span style="visibility: hidden;">.</span>
+					</div>
+
+					<li class="selected">
+						<div class="selected-color"></div>
+						<div class="selected-color__code">
+							<span class="selected-color__codeitem">
+							</span>
+							<span class="selected-color__copy"><i class="far fa-copy"></i></span>
+							<div class="selected-notification">
+								<span><span class="rgb-color"></span> is Copied</span> <span
+									class="notice-icon"><i class="fas fa-check-circle"></i></span>
+							</div>
+						</div>
+					</li>
+					<li class="hovered">
+						<div class="hovered-color"></div>
+						<div class="hovered-color__code">
+							<span class="hovered-color__codeitem">
+							</span>
+							<span class="hovered-color__copy"><i class="far fa-copy"></i></span>
+							<span class="hovered-notification">
+								<span><span class="hex-color"></span> is Copied</span> <span class="notice-icon1"><i
+										class="fas fa-check-circle"></i></span>
+							</span>
+						</div>
+					</li>
+					<li class="hovered1">
+						<div class="hovered-color1"></div>
+						<div class="hovered-color__code1">
+							<span class="hovered-color__codeitem1">
+							</span>
+							<span class="hovered-color__copy1"><i class="far fa-copy"></i></span>
+							<span class="hovered-notification1">
+								<span><span class="hsl-color"></span> is Copied</span> <span class="notice-icon2"><i
+										class="fas fa-check-circle"></i></span>
+							</span>
+						</div>
+					</li>
+				</div>
+
+				<div class="input-image__wrapper">
+					<div class="drop-zone" ondrop="dropImageFromFile(event);" ondragover="dragOverHandler(event);">
+						<span class="drop-zone__icon"><i class="far fa-folder-open"></i></span>
+						<span class="drop-zone__icon1"><i class="far fa-check-circle"></i></span>
+						<p>Drop your Photos Here to Upload... 😎</p>
+						<p class="or">OR just</p>
+
+						<label for="file-upload" class="browse-file">
+							<i class="fas fa-arrow-circle-up"></i> Browse files
+						</label>
+						<input id="file-upload" type="file" accept="image/*" onchange="uploadImage()" />
+
+						<p class="file-name__wrapper">
+							<i class="far fa-file-image"></i> <span class="file-name">
+							</span>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<script src="script.js"></script>
+
+</html>
